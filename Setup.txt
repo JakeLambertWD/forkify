@@ -1,0 +1,79 @@
+Install Prettier as an extension in VS:
+	Prettier is an opinionated code formatter. It enforces a consistent style 
+	by parsing your code and re-printing it with its own rules that take the 
+	maximum line length into account, wrapping code when necessary.
+
+Install Node for Live Server
+In cmd: 
+node -v
+npm install live-server -g
+live server
+
+FORKIFY
+To setup project :
+// setup package.json file
+npm init
+// add to package.json
+ "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+// run start script
+npm run start 
+// install dependencies
+npm install
+
+// install parcel as a dev dependency
+// @next is used to install version 2 of parcel
+npm install parcel@next -D
+// install fractional 
+npm install fractional
+// install 
+npm install core-js regenerator-runtime
+
+
+DEPLOYMENT WITH NETLIFY
+
+package.json // we changed the build and changed main to default
+{
+  "name": "forkify",
+  "version": "1.0.0",
+  "description": "",
+  "default": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "author": "Jake Lambert",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.0.0-beta.1",
+    "sass": "^1.30.0"
+  },
+  "dependencies": {
+    "fractional": "^1.0.0"
+  }
+}
+
+// the final build will be located in the dist folder
+npm run build
+
+// free service to run static websites meaning just html, css & js but no database or server side 
+www.netlify.com
+
+// Setting up git and github
+git init  
+git config --global user.name JakeLambertWD
+git config --global user.email jakelambert1@hotmail.co.uk
+
+// git fundamentals
+inside the .gitignore file
+node_modules
+dist
+.parcel-cache
+
+// check untracked (U) files
+git status
+
+// add (A) files to staging area
+git add -A
