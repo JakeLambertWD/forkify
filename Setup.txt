@@ -77,3 +77,47 @@ git status
 
 // add (A) files to staging area
 git add -A
+
+// commit files to github repository w/ comment
+git commit -m 'Initial commit'
+
+// this will delete any new changed from the most recent commit
+git reset --hard HEAD
+
+BRANCH: Developers never work in the master branch, to implement a 
+        new feature a new branch is created. Then if it all works you can merge together
+
+// check branch
+git branch
+
+// create new branch
+git branch new-feature
+
+// change branch 
+git checkout new-feature
+
+// save to new branch
+git add -A
+git commit -m 'Added new feature'
+
+// merge new branch with the master branch
+git merge new-feature
+
+// git cheat sheet
+https://education.github.com/git-cheat-sheet-education.pdf
+
+// create a new repository on the command line
+git remote add origin https://github.com/JakeLambertWD/forkify.git
+git push -u origin master
+
+SETTING UP CONTINUOUS INTERGRATION WITH NETFLIFY
+https://app.netlify.com/sites/forkify-jake/settings/deploys
+link site to git
+github
+// select repository
+// input these settings
+Build command
+  npm run build
+Publish directory
+  dist/
+

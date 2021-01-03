@@ -64,7 +64,6 @@ const controlSearchResults = async function () {
 // pagination
 const controlPagination = function (goToPage) {
   // 1. render NEW search results
-  // resultsView.render(model.state.searchList.results);
   resultsView.render(model.getSearchResultsPage(goToPage));
 
   // 2. render NEW pagination buttons
